@@ -1,0 +1,18 @@
+{
+    "name": "taf",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "taf-target": "http://127.0.0.1:5000",
+    "scripts": {
+        "start": "node app.js & lt --port 3000 --subdomain taftaf",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.3",
+        "http-proxy": "^1.17.0",
+        "localtunnel": "^1.9.0"
+    }
+}
