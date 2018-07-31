@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "taf-target": "http://127.0.0.1:5000",
+    "taf-target": "http://127.0.0.1:3000",
     "scripts": {
         "start": "node app.js & lt --port 3000 --subdomain taftaf",
         "test": "echo \"Error: no test specified\" && exit 1"

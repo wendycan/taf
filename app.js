@@ -11,17 +11,17 @@ app.get('/taf', function(req, res) {
     res.send('three as four');
 });
 
-const internalHost = '127.0.0.1:5000';
+const internalHost = packeageData['taf-target'];
 app.use('/uc', (req, res) => {
     req.url = req.baseUrl + req.url;
     req.headers.hostname = internalHost;
-    req.headers.referer = packeageData['taf-target'];
+    req.headers.referer = internalHost;
 
     apiProxy.web(
         req,
         res,
         {
-            target: packeageData['taf-target'],
+            target: internalHost,
             secure: true,
             changeOrigin: true,
         },
@@ -29,4 +29,4 @@ app.use('/uc', (req, res) => {
     );
 });
 
-app.listen(3000);
+app.listen(3001);
