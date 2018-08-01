@@ -12,7 +12,7 @@ app.get('/taf', function(req, res) {
 });
 
 const internalHost = packeageData['taf-target'];
-app.use('/uc', (req, res) => {
+app.use('/', (req, res) => {
     req.url = req.baseUrl + req.url;
     req.headers.hostname = internalHost;
     req.headers.referer = internalHost;
